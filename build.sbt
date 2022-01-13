@@ -43,6 +43,7 @@ lazy val core = projectMatrix
   .settings(munitSettings)
   .settings(
     name := "scalapb-validate-core",
+    version := "0.3.2-hotfix1",
     libraryDependencies ++= Seq(
       "com.thesamet.scalapb.common-protos" %% "pgv-proto-scalapb_0.11" % (pgvVersion + "-0"),
       "com.thesamet.scalapb.common-protos" %% "pgv-proto-scalapb_0.11" % (pgvVersion + "-0") % "protobuf",
@@ -87,6 +88,7 @@ lazy val codeGen = projectMatrix
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
     buildInfoPackage := "scalapb.validate.compiler",
     name := "scalapb-validate-codegen",
+    version := "0.3.2-hotfix1",
     libraryDependencies ++= Seq(
       "com.thesamet.scalapb" %% "compilerplugin" % scalapbVersion,
       // scalapb-runtime does not gent automatically added since we do not have Scala gen,
